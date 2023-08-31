@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="410" height="137" viewBox="0 0 410 137">
+    <defs>
+        <path id="a" d="M0 0h410v137H0z"/>
+        <linearGradient id="d" x1="12.632%" x2="103.203%" y1="54.362%" y2="54.362%">
+            <stop offset="0%" stop-color="#FFFEFD"/>
+            <stop offset="100%" stop-color="#FFFCFB" stop-opacity="0"/>
+        </linearGradient>
+        <path id="c" d="M0 0h410v137H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#FFFCFB" fill-rule="nonzero" xlink:href="#a"/>
+        <g stroke="#F8D9E0" mask="url(#b)">
+            <path d="M394.663 158.54L259.876 83.334M260.635 170.637L414.558 81.77l.729 65.386-153.924 88.868"/>
+            <path d="M318.369 203.112L104.189 84.173l212.264-125.02c11.966-7.046 26.791-7.163 38.9-.307 26.085 14.768 26.541 52.219.823 67.489l-92.53 54.939-79.61 47.268"/>
+            <path d="M261.146 249.08l-1.233-233.797a37.908 37.908 0 0 0-18.619-32.436C216-32.106 184.036-13.845 184.071 15.54l.155 134.943c.036 30.734-32.677 50.446-59.834 36.054a40.734 40.734 0 0 1-21.66-36.39l5.075-277.756M336.1 37.989l.927 88.544"/>
+        </g>
+        <use fill="url(#d)" fill-rule="nonzero" xlink:href="#c"/>
+    </g>
+</svg>

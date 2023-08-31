@@ -1,0 +1,313 @@
+#banner{
+  position: relative;
+  background: $secondary_colour;
+  background: $secondary_colour url(../img/home/careers_info_bg.png) no-repeat center right;
+  z-index: 100;
+
+  .container{
+    position: relative;
+  }
+
+  .image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58.7%;
+    height: 100%;
+    background: url(../img/home/careers_bg.png) no-repeat center;
+
+  }
+
+  .info{
+    position: relative;
+    width: 41.3%;
+    float: right;
+
+    background-size: cover;
+    padding: 0 0 115px;
+
+    .inner{
+      padding: 40px 40px 0 50px;
+
+      span.sub{
+        display: block;
+        font-size: 18px;
+        font-family: "CircularStd Book", Helvetica, Arial, sans-serif;
+        color: #fff1f1;
+        margin-bottom: 40px;
+      }
+
+      h3{
+        font-size: 30px;
+        font-family: "CircularStd Bold", Helvetica, Arial, sans-serif;
+        color: #fff1f1;
+        line-height: 150%;
+        margin-bottom: 40px;
+      }
+
+    }
+
+  }
+
+  &.careers {
+
+    .image{
+      background: url(../img/banners/careers_bg.png) no-repeat center;
+    }
+
+  }
+
+  &.trainers {
+
+    .image{
+      background: url(../img/banners/trainers_bg.png) no-repeat center;
+    }
+
+  }
+
+  &.news {
+
+    .image{
+      background: url(../img/banners/news_bg.png) no-repeat center;
+    }
+
+  }
+
+}
+
+
+footer{
+  padding: 37px 0;
+  background: #343333;
+  position: relative;
+  z-index:100;
+
+  .container{
+    position: relative;
+  }
+
+  a.wellcome{
+    display: block;
+    float: left;
+  }
+
+  .links{
+    display: none;
+
+    ul{
+      padding: 0;
+
+      li{
+        margin: 0;
+
+        a{
+          @include font-primary(18, #fff, $default_weight, 125%);
+        }
+
+      }
+
+    }
+
+
+  }
+
+  a.siteBy{
+    display: block;
+    float: right;
+    width: 79px;
+    height: 30px;
+    text-indent: -9999px;
+    background: url(../img/hellosquare@x2.png) no-repeat;
+    background-size: 100%;
+    margin-top: 20px;
+  }
+
+  nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    ul{
+      display: inline-block;
+
+      li{
+        font-size: 15px;
+        font-family: "Roboto", Helvetica, Arial;
+        color: #fff;
+        display: inline-block;
+        margin: 0 15px;
+
+        a{
+          font-size: 15px;
+          font-family: "Roboto", Helvetica, Arial;
+          color: #fff;
+          @include transition();
+        }
+
+        a:hover{
+          color: $secondary_colour;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+//1200px
+@include mq("desktop"){
+
+
+  #banner .image{
+    background-position: center right;
+  }
+  #banner .info{
+    width: 60%;
+    background: #d21c32;
+
+  }
+
+}
+
+//1024px
+@include mq("tablet-wide"){
+  #banner .info{
+    padding-bottom: 40px;
+
+  }
+
+
+
+}
+
+//991px
+@include mq("tablet-semiwide"){
+
+  #banner .info .inner h3{
+    font-size: 26px !important;
+  }
+
+}
+
+//850px
+@include mq("tablet-medium"){
+
+  #banner .container{
+    padding: 0;
+  }
+
+  #banner .info{
+    width: 100%;
+    background: #d21c32 url(../img/home/careers_info_bg.png) no-repeat center right;
+    float: none;
+
+  }
+
+  footer{
+    padding: 37px 0;
+  }
+
+  footer a.wellcome{
+    margin-right: 20px;
+  }
+
+  footer .links{
+    display: block;
+    float: left;
+    margin-bottom: 30px;
+
+    ul{
+      margin: 0;
+
+      li{
+        margin-bottom: 15px;
+      }
+
+    }
+
+  }
+
+  footer nav{
+    clear: both;
+    padding-top: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-bottom: 6px;
+    border-top: 1px #484646 solid;
+
+
+    a.toTop{
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url(../img/icon_top.svg) no-repeat center;
+      position: absolute;
+      top: -20px;
+      right: 0;
+    }
+
+  }
+
+  footer nav ul{
+    padding: 0;
+    display: block;
+  }
+
+  footer nav ul li{
+    text-align: left;
+    display: block;
+    color: #807f7f;
+    max-width: 200px;
+    margin-left: 0;
+
+    a{
+      color: #807f7f;
+      @include transition();
+    }
+
+
+
+  }
+
+  footer a.siteBy{
+    float: none;
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+
+  }
+
+}
+
+//782px
+@include mq("tablet") {
+
+  #banner .info{
+    text-align: center;
+  }
+
+
+  #banner .info .inner span.sub{
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+
+}
+
+//400
+@include mq("phone"){
+  #banner .info .inner h3 {
+    font-size: 20px !important;
+  }
+
+  footer .links ul li a{
+    font-size: 16px;
+  }
+
+}

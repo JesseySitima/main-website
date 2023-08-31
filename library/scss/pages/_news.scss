@@ -1,0 +1,288 @@
+#main.news{
+
+  .featured{
+    padding-top: 50px;
+    border-bottom: 10px #f5f2ee solid;
+    margin-bottom: 60px;
+
+    h2{
+      margin-bottom: 60px;
+      @include font-primary(40, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+    }
+
+    article{
+      width: 100%;
+      margin: 0 0 60px;
+
+      .image{
+        float: left;
+        width: 45.6%;
+        margin-right: 4.63%;
+
+        img{
+          width: 100%;
+        }
+
+      }
+
+      .info{
+        float: left;
+        width: 45.5%;
+
+        .meta{
+          padding-top: 0;
+        }
+
+        h3{
+          line-height: 80%;
+
+          a{
+            font-size: 40px;
+            color: $secondary_colour;
+            line-height: 125%;
+          }
+
+        }
+
+        p{
+          max-width: 460px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .list{
+
+
+  }
+
+  .pagination{
+    position: relative;
+
+    .inner{
+      display: none;
+    }
+
+  }
+
+  .action{
+    padding: 50px 0;
+    text-align: center;
+
+    a.loadMore{
+      position: relative;
+      padding: 10px 60px 12px;
+    }
+
+  }
+
+}
+
+#main.news.single{
+  position: relative;
+  z-index: 100;
+
+  .details {
+    position: relative;
+    padding: 0 0 70px;
+
+    aside{
+      width: 32%;
+      position: relative;
+      top: -280px;
+
+
+      a.backTo{
+        display: block;
+        margin-bottom: 30px;
+
+        span{
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        span.arrow{
+          width: 29px;
+          height: 22px;
+          background: url(../img/research/back_arrow.svg) no-repeat center;
+          margin-right: 10px;
+          @include transition(0.3s);
+        }
+
+        span.text{
+          @include font-primary(16, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+          @include transition();
+        }
+
+      }
+
+      .featuredImage{
+
+        img{
+          display: block;
+          width: 100%;
+          max-width: 100%;
+        }
+
+      }
+
+      a.backTo:hover{
+
+        span.text{
+          color: $secondary_colour;
+        }
+
+      }
+
+      .meta{
+        padding: 20px 0 35px;
+
+        span{
+          display: inline-block;
+          vertical-align: middle;
+          @include font-primary(18, #a2a5ae, $default_weight, 125%, $secondary_font_stack_book);
+        }
+
+        span.category{
+          color: $secondary_colour;
+        }
+
+        span.separator{
+          width: 15px;
+          height: 1px;
+          background: #a2a5ae;
+        }
+
+        a {
+          color: $secondary_colour;
+        }
+
+      }
+
+    }
+
+
+    .info{
+      width: 54.6%;
+
+      .description{
+        border-bottom: 7px #231508 solid;
+        padding-bottom: 50px;
+        margin-bottom: 60px;
+
+        p{
+          @include font-primary(30, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+        }
+
+      }
+
+
+    }
+
+  }
+
+  .related {
+    margin-bottom: 50px;
+
+    .container{
+      padding-top: 60px;
+      border-top: 10px #f5f2ee solid;
+
+    }
+
+    h2 {
+      margin-bottom: 35px;
+      @include font-primary(40, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+    }
+
+  }
+
+}
+
+//1024px
+@include mq("tablet-wide"){
+
+  #main.news .featured h2{
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  #main.news .featured article .info h3 a{
+    font-size: 32px;
+  }
+
+  #main.news .featured article .info p{
+    margin-bottom: 40px;
+  }
+
+  #hero.single .caption h2{
+    font-size: 40px;
+  }
+
+  #main.news.single .details .info .description p{
+    font-size: 24px;
+  }
+
+}
+
+//782px
+@include mq("tablet") {
+
+
+
+  #main.news.single .details aside{
+    width: 100%;
+    top: 0;
+    margin-bottom: 40px;
+  }
+
+  #main.news.single .details .info{
+    width: auto;
+    float: none;
+  }
+
+}
+
+//640px
+@include mq("tablet-small") {
+
+  #main.news .featured article .image{
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  #main.news .featured article .info{
+    float: none;
+    width: 100%;
+  }
+
+  #main.news.single .details aside .meta{
+    padding-bottom: 0;
+  }
+
+  #main.news.single .details aside .meta span{
+    font-size: 16px;
+  }
+
+  #main.news .featured article .info h3 a{
+    font-size: 26px;
+  }
+
+  #main.news.single .details .info .description p{
+    font-size: 18px;
+  }
+
+  #main.news.single .related h2{
+    font-size: 32px;
+  }
+
+  #main.news.single .related .container{
+    padding-top: 70px;
+  }
+
+}

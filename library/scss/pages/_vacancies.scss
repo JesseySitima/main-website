@@ -1,0 +1,420 @@
+#main.vacancieslist{
+
+  .wrapper{
+    padding: 70px 0;
+
+    p.note{
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 30px;
+
+      a{
+        color: $secondary_colour;
+        border-bottom: 1px transparent solid;
+        @include transition();
+
+        &:hover{
+          border-color: $secondary_colour;
+        }
+
+      }
+
+    }
+
+    .list{
+      border-top: 20px #f5f2ee solid;
+
+      .vacancy{
+        padding: 30px 30px 30px 30px;
+        border-bottom: 2px #f5f6f6 solid;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0);
+        @include transition();
+
+        h3{
+          float: left;
+          margin-top: 10px;
+          max-width: 50%;
+          @include font-primary(22, $primary_colour, $default_weight, 125%);
+        }
+
+        .right{
+          width: 45%;
+
+          span.meta, .apply{
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          span.meta{
+            float: left;
+            margin-top: 10px;
+          }
+
+          .apply{
+            float: right;
+          }
+
+        }
+
+      }
+
+      .vacancy:hover{
+        background: #fffcfc;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        border-color: $secondary_colour;
+      }
+
+
+      .error{
+        background: #fff1f1;
+        padding: 35px 0;
+        text-align: center;
+
+        span{
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        span.icon{
+          width: 34px;
+          height: 34px;
+          background: url(../img/icon_error.svg) no-repeat center;
+          margin-right: 10px;
+        }
+
+        span.text{
+          @include font-primary(30, $secondary_colour, $default_weight,  $default_lh);
+        }
+
+      }
+
+
+    }
+
+  }
+
+}
+
+#main.vacanciesdetail {
+  padding: 70px 0;
+
+  a.backTo{
+    display: block;
+    margin-bottom: 40px;
+
+    span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    span.arrow{
+      width: 29px;
+      height: 22px;
+      background: url(../img/research/back_arrow.svg) no-repeat center;
+      margin-right: 10px;
+      @include transition(0.3s);
+    }
+
+    span.text{
+      @include transition();
+      @include font-primary(16, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+    }
+
+  }
+
+  a.backTo:hover{
+
+    span.text{
+      color: $secondary_colour;
+    }
+
+  }
+
+  .wrapper{
+
+    .asideanchor, .bottomanchor{
+      position: relative;
+    }
+
+    .bottomanchor{
+      width: 100%;
+      height: 1px;
+    }
+
+    aside{
+      float: left;
+      width: 33.9%;
+
+      .inner{
+        padding: 20px 15px 30px;
+        border-bottom: 20px #f5f2ee solid;
+        margin-bottom: 60px;
+
+        h2{
+          font-size: 42px;
+        }
+
+        ul.meta{
+          padding: 0;
+
+          li{
+            margin-bottom: 5px;
+
+            span{
+              display: inline-block;
+              vertical-align: middle;
+            }
+
+            span.icon{
+              width: 30px;
+              height: 23px;
+
+            }
+
+            span.icon.location{
+              background: url(../img/vacancy/icon_location.svg) no-repeat center left;
+            }
+
+            span.icon.type{
+              background: url(../img/vacancy/icon_type.svg) no-repeat center left;
+            }
+
+          }
+
+        }
+
+      }
+
+      .actions{
+        padding: 0 15px 30px;
+
+        a.apply{
+
+        }
+
+      }
+
+    }
+
+    .details{
+      float: right;
+      width: 56.6%;
+      padding-top: 20px;
+
+      .block{
+        position: relative;
+        margin-bottom: 60px;
+
+        .title{
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+          border-bottom: 2px #d0d1d6 solid;
+
+          h3{
+            @include font-primary(25, $primary_colour, bold, 125%);
+          }
+
+        }
+
+        .articleContent{
+
+          li{
+            font-size: 20px;
+          }
+
+        }
+
+      }
+
+      .bottom{
+        margin-top: 40px;
+        padding: 35px 0 0 20px;
+        border-top: 2px #d0d1d6 solid;
+
+        span.date{
+          @include font-primary(18, #a6a19b, $default_weight, 125%);
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+#page.sticky #main.vacanciesdetail .wrapper aside{
+  position: fixed; top: 0; z-index: 5; width: auto;
+  max-width: 435px;
+}
+
+#page.sticky .asideanchor{display: block;}
+
+//1024px
+@include mq("tablet-wide"){
+
+  #main.vacancieslist .wrapper .list .vacancy h3{
+    font-size: 20px !important;
+  }
+
+}
+
+
+//782px
+@include mq("tablet") {
+
+  #main.vacanciesdetail{
+    padding: 70px 0 100px;
+  }
+
+  #main.vacanciesdetail a.backTo{
+    margin-bottom: 40px;
+  }
+
+  #main.vacancieslist .wrapper{
+    padding: 70px 0;
+  }
+
+
+
+  #main.vacancieslist .wrapper .list .vacancy{
+    padding: 20px 15px;
+  }
+
+  #main.vacancieslist .wrapper .list .vacancy h3{
+    float: none;
+    margin-bottom: 5px;
+    max-width: none;
+  }
+
+  #main.vacancieslist .wrapper .list .vacancy .right{
+    float: none;
+    width: auto;
+  }
+
+  #main.vacancieslist .wrapper .list .vacancy .right span.meta{
+    font-size: 16px;
+  }
+
+  #main.vacanciesdetail .wrapper aside .inner h2{
+    font-size: 26px;
+  }
+
+}
+
+//640px
+@include mq("tablet-small"){
+
+  .asidespacer{display: none;}
+
+  #main.vacanciesdetail .wrapper aside{
+    float: none;
+    width: 100%;
+  }
+
+  #page.stickyout  #main.vacanciesdetail .wrapper aside{
+    position: absolute;
+    top: -500px;
+  }
+
+  #page.sticky #main.vacanciesdetail .wrapper aside{
+    background: #fff;
+    width: 100%;
+    max-width: none;
+    top: 62px;
+    left: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  #page.sticky #main.vacanciesdetail .wrapper aside .inner{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  #page.sticky #main.vacanciesdetail .wrapper aside .inner:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  #page.sticky #main.vacanciesdetail .wrapper aside .inner h2{
+    font-size: 16px;
+  }
+
+  #page.sticky #main.vacanciesdetail .wrapper aside .inner ul.meta{
+  }
+
+  #page.sticky #main.vacanciesdetail .wrapper aside .actions{
+    padding: 0;
+  }
+
+  #page.sticky #main.vacanciesdetail .wrapper aside .actions a.apply{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #page.sticky .asidespacer{
+    position: relative;
+    height: 320px;
+    display: block;
+  }
+
+  #page.sticky #main.vacanciesdetail .wrapper aside .inner ul.meta li{
+    float: left;
+    margin-right: 15px;
+  }
+
+  #main.vacanciesdetail .wrapper aside .inner ul.meta li span{
+    font-size: 12px;
+  }
+
+  #main.vacanciesdetail .wrapper .details{
+    float: none;
+    width: auto;
+  }
+
+  #main.vacanciesdetail .wrapper .details .block .title h3{
+    font-size: 18px !important;
+  }
+
+  #main.vacanciesdetail .wrapper .details .block .articleContent li{
+    font-size: 14px;
+  }
+
+  #main.vacanciesdetail .wrapper .details .bottom span.date{
+    font-size: 15px;
+  }
+
+}
+
+//400
+@include mq("phone"){
+
+  #page.sticky #main.vacanciesdetail .wrapper aside .actions{
+    padding: 10px 15px;
+  }
+
+  #page.sticky #main.vacanciesdetail .wrapper aside .actions a.apply{
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 2px 40px 4px 60px;
+
+    span.arrow{
+      top: 9px;
+    }
+
+    span.text{
+      font-size: 11px;
+      display: block;
+    }
+
+  }
+
+  #page.sticky  #main.vacanciesdetail .wrapper aside .inner ul.meta{
+    display: none;
+  }
+
+}

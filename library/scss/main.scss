@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+@import '../fonts/stylesheet.css';
+
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+//@import 'vendors/bootstrap';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/wordpress';
+
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
+
+@import 'layout/hero';
+
+@import 'components/buttons';
+@import 'components/slider';
+
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/researchlist';
+@import 'pages/researchdetail';
+@import 'pages/programme';
+@import 'pages/training';
+@import 'pages/engagement';
+@import 'pages/strategy';
+@import 'pages/vacancies';
+@import 'pages/contact';
+@import 'pages/publications';
+@import 'pages/operations';
+@import 'pages/science';
+@import 'pages/news';
+@import 'pages/trainingopportunities';
+@import 'pages/search';
+
+@import 'themes/theme';

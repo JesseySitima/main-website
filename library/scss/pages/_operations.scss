@@ -1,0 +1,518 @@
+
+#hero.operations{
+  position: relative;
+  overflow: hidden;
+  .slider{
+    position: relative;
+    max-height: 750px;
+
+    #operationsSlider{
+      max-height: 750px;
+    }
+
+    img{
+      max-width: 100%;
+    }
+
+    .slick-dots{
+      position: absolute;
+      bottom: 60px;
+      right: 70px;
+
+      li{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+
+        button{
+          border: 3px #d0021b solid;
+          text-indent: -9999px;
+          width: 18px;
+          height: 18px;
+          padding: 0;
+          background: none;
+          border-radius: 50%;
+          outline: none;
+          opacity: 1;
+          @include transition();
+
+          &:hover{
+            opacity: 0.7;
+          }
+
+        }
+
+        &.slick-active{
+          button{
+            background: #d0021b;
+          }
+        }
+
+      }
+
+    }
+
+  }
+}
+
+
+
+
+#main.operations{
+
+  .about{
+
+    .intro{
+      padding: 70px 0;
+      border-bottom: 20px #f5f2ee solid;
+
+      p{
+        font-size: 40px;
+        margin: 0 auto;
+        max-width: 870px;
+      }
+
+    }
+
+    .articleContent{
+      padding: 70px 0;
+      max-width: 570px;
+
+      p.first{
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 35px;
+      }
+
+      p{
+        font-size: 22px;
+      }
+
+      li{
+        font-size: 22px;
+      }
+
+      ol{
+
+        li{
+
+          &:before{
+            top: 0;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .departments{
+    padding: 0 0 90px;
+    background: #f5f2ee url(../img/operations/departments_decal.png) no-repeat left bottom;
+    overflow: hidden;
+
+    h2{
+      text-align: center;
+      margin-bottom: 70px;
+      @include font-primary(40, $primary_colour, $default_weight,  $default_lh, $secondary_font_stack_bold);
+    }
+
+    .tablinks{
+      position: relative;
+      padding-top: 35px;
+      margin-bottom: 70px;
+      text-align: center;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+
+      a{
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 35px;
+        margin: 0 15px;
+        border-bottom: 4px transparent solid;
+        @include font-primary(20, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+        @include transition();
+
+      }
+
+      a:hover{
+        color: $secondary_colour;
+      }
+
+      a.current{
+        color: $secondary_colour;
+        border-color: $secondary_colour;
+
+      }
+
+    }
+
+
+    aside.links{
+      width: 25.69%;
+      float: left;
+
+      .inner{
+        padding: 0 0 0 80px;
+
+        a{
+          display: block;
+          margin-bottom: 20px;
+          position: relative;
+          @include font-primary(17, #a6a19b, $default_weight,  $default_lh);
+          @include transition();
+          &.indent{
+            padding: 0 10px 0 16px;
+          }
+        }
+
+        a.current{
+          color: #1a233a;
+
+          &:before{
+            content: "";
+            display: block;
+            width: 4px;
+            height: 4px;
+            background: $secondary_colour;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: -12px;
+
+          }
+        }
+
+      }
+
+    }
+
+    .tabs{
+      float: right;
+      width: 74.31%;
+
+      .tab{
+        position: relative;
+        display: none;
+
+        .wrapper{
+
+          .details{
+            float: left;
+            width: 65.5%;
+
+            h3{
+              display: block;
+              margin-bottom: 40px;
+              @include font-primary(18, $secondary_colour, $default_weight,  $default_lh, $secondary_font_stack_bold);
+            }
+
+            .block{
+              position: relative;
+              padding-bottom: 40px;
+
+              h4{
+                display: block;
+                margin-bottom: 25px;
+                @include font-primary(25, #2d3142, bold,  $default_lh);
+
+              }
+
+              .articleContent{
+                max-width: 535px;
+
+                p{
+                  @include font-primary(18, $primary_colour, $default_weight,  $default_lh);
+                }
+
+                ul, ol{
+                  margin-top: 40px;
+                  margin-bottom: 30px;
+                }
+
+                li{
+                  font-size: 16px;
+                  margin-bottom: 8px;
+
+                  &:before{
+                    top: 7px;
+                  }
+
+                }
+
+
+              }
+
+            }
+
+
+          }
+
+          .team{
+            position: relative;
+            float: right;
+            width: 34.5%;
+            padding-top: 60px;
+
+            .wrap{
+              position: relative;
+              width: 290px;
+
+            }
+            .slideControls{
+              padding: 25px 0;
+              border-bottom: 1px #b6bcd6 solid;
+              max-width: 290px;
+
+              .paginate{
+                float: left;
+
+                span{
+                  display: inline-block;
+                  vertical-align: top;
+                  margin-right: 5px;
+                  text-transform: uppercase;
+                  @include font-primary(14, $primary_colour, $default_weight,  $default_lh, $secondary_font_stack_mono);
+
+                }
+
+                span.total{
+                  color: #c0c4cd;
+                }
+
+
+              }
+
+              .arrows{
+                float: right;
+
+                a{
+                  display: inline-block;
+                  width: 32px;
+                  height: 20px;
+                  margin-left: 10px;
+                }
+
+                a.prev{
+                  transform: rotate(180deg);
+                  background: url(../img/operations/arrow_active.svg) no-repeat center;
+                }
+
+                a.next{
+                  background: url(../img/operations/arrow_inactive.svg) no-repeat center;
+                }
+
+                a.active{
+                  background: url(../img/operations/arrow_active.svg) no-repeat center;
+                }
+
+              }
+
+            }
+
+            .meta{
+              max-width: 290px;
+
+              ul{
+                padding: 0;
+
+                li{
+
+                  span{
+                    display: inline-block;
+                    vertical-align: top;
+                  }
+
+                  span.label{
+                    width: 90px;
+                    @include font-primary(16, #2d3142, 500,  $default_lh);
+
+                  }
+
+                  span.value{
+                    max-width: calc(100% - 105px);
+                    @include font-primary(16, #2d3142, 400,  $default_lh);
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      .tab.current{
+        display: block;
+      }
+
+    }
+
+  }
+
+}
+
+//1024px
+@include mq("tablet-wide"){
+
+
+  #main.operations .about .intro p{
+    font-size: 28px;
+  }
+
+  #main.operations .departments .tabs .tab .wrapper .details h3{
+    font-size: 18px !important;
+  }
+
+  #hero.operations .decal{
+    display: none;
+  }
+
+}
+
+//782px
+@include mq("tablet") {
+
+  #main.operations .about .intro{
+    padding: 70px 0;
+  }
+
+  #main.operations .about .articleContent{
+    padding: 70px 0;
+  }
+
+  #main.operations .about .articleContent p.first{
+    font-size: 18px;
+  }
+
+  #main.operations .about .articleContent li{
+    font-size: 16px;
+  }
+
+  #main.operations .departments{
+    padding: 0 0 150px;
+  }
+
+  #main.operations .departments h2{
+    margin-bottom: 70px;
+    font-size: 26px;
+  }
+
+  #main.operations .departments .tablinks{
+    padding: 0;
+  }
+  #main.operations .departments .tablinks a{
+    display: block;
+    padding:  15px 0;
+    font-size: 15px;
+    border-bottom: 1px #ece8e0 solid;
+  }
+
+  #main.operations .departments aside.links{
+    float: none;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  #main.operations .departments aside.links .inner{
+    padding:0 20px;
+  }
+
+
+  #main.operations .departments aside.links .inner a {
+    display: block;
+    vertical-align: middle;
+    border-bottom: 3px transparent solid;
+    text-align: center;
+    @include font-primary(16, rgba(26, 35, 58, 0.5), $default_weight, 100%, $secondary_font_stack_book);
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  }
+
+  #main.operations .departments aside.links .inner a:before{
+    display: none !important;
+  }
+
+  #main.operations .departments .tabs{
+    float: none;
+    width: auto;
+    padding: 0 15px;
+  }
+
+  #main.operations .departments .tabs .tab .wrapper .details .block h4{
+    font-size: 18px;
+  }
+
+  #main.operations .departments .tabs .tab .wrapper .details{
+    float: none;
+    width: auto;
+  }
+
+  #main.operations .departments .tabs .tab .wrapper .team{
+    float: none;
+    width: 100%;
+  }
+
+}
+
+//782px
+@include mq("tablet") {
+
+  #hero.operations{
+    height: 100vh;
+    height: 50vh;
+    margin-top: 65px;
+
+    .slider{
+
+      .slick-dots{
+        padding: 0;
+        margin: 0;
+        bottom: 30px;
+        right: 30px;
+
+        li{
+          margin: 0 5px;
+
+          button{
+            width: 9px;
+            height: 9px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .wrapper .caption{
+      bottom: 30%;
+      h2{
+        font-size: 22px;
+      }
+    }
+
+
+  }
+
+  #main.operations .container{
+    padding: 0;
+  }
+
+  #main.operations .about .container{
+    padding: 0 20px;
+  }
+
+  #main.operations .about .intro p {
+    font-size: 18px;
+  }
+
+}

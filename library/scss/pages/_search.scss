@@ -1,0 +1,89 @@
+/*************** search */
+
+#main.search {
+  padding: 70px 0;
+
+  .list {
+    border-top: 20px #f5f2ee solid;
+    margin-bottom: 40px;
+
+    article.post{
+      padding: 30px 30px 30px 30px;
+      border-bottom: 2px #f5f6f6 solid;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0);
+      @include transition();
+
+      .meta {
+        margin-bottom: 10px;
+
+        span{
+          display: inline-block;
+          @include font-primary(14, #aaaba7, $default_weight, 125%);
+          text-transform: uppercase;
+        }
+
+      }
+
+      h3{
+        float: left;
+        margin-top: 10px;
+        max-width: 50%;
+        @include font-primary(22, $primary_colour, $default_weight, 125%);
+
+        a{
+          @include font-primary(22, $primary_colour, $default_weight, 125%);
+          @include transition();
+
+          &:hover{
+            color: #d21c32;
+          }
+
+        }
+
+      }
+
+      .right{
+        width: 45%;
+
+        span.meta, .apply{
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        span.meta{
+          float: left;
+          margin-top: 10px;
+        }
+
+        .apply{
+          float: right;
+        }
+
+      }
+
+    }
+
+  }
+
+  .pagination{
+    position: relative;
+
+    .inner{
+      display: none;
+    }
+
+  }
+
+  .action{
+    padding: 50px 0;
+    text-align: center;
+
+    a.loadMore{
+      position: relative;
+      padding: 10px 60px 12px;
+    }
+
+  }
+
+}
+

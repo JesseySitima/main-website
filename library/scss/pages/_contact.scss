@@ -1,0 +1,319 @@
+#main.contact{
+
+  .contactDetails{
+    padding: 70px 0 0 0;
+    margin-bottom: 0;
+
+    .block{
+      float: left;
+      width: 45%;
+
+      h3{
+        margin-bottom: 30px;
+        @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+      }
+
+    }
+
+    .block.address{
+
+      p{
+        margin-bottom: 30px;
+      }
+
+      a.map{
+
+        span{
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        span.arrow{
+          width: 25px;
+          height: 14px;
+          background: url(../img/contact/icon_map_arrow.svg) no-repeat center left;
+          @include transition(0.3s);
+        }
+
+        span.text{
+          @include font-primary(16, $secondary_colour, $default_weight, 125%, $secondary_font_stack_mono);
+        }
+
+      }
+
+    }
+
+    .block.tel{
+
+      ul{
+        padding: 0;
+
+        li{
+
+          span.label{
+            color: $secondary_colour;
+          }
+
+        }
+
+      }
+
+    }
+
+    .line{
+      display: block;
+      height: 20px;
+      width: 100%;
+      background: #f5f2ee;
+      margin-top: 50px;
+
+    }
+
+  }
+
+  .enquiriesForm{
+    position: relative;
+    padding: 70px 0;
+
+    .container{
+      position: relative;
+      z-index: 2;
+    }
+
+    .map{
+      width: 100%;
+      max-width: 574px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      #mapArea{
+        position: relative;
+        height: 555px;
+        width: 100%;
+      }
+
+    }
+
+
+    .wrapper{
+      width: 53.3%;
+
+      h3{
+        margin-bottom: 30px;
+        @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+      }
+
+      .form{
+        position: relative;
+
+        li{
+          position: relative;
+          margin-bottom: 30px !important;
+          background: none;
+          border: none;
+
+          .ginput_container{
+            margin: 0 !important;
+          }
+
+
+          label{
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            margin: 0;
+            @include font-primary(16, #a4a7b0, $default_weight, 125%, $secondary_font_stack_book);
+            @include transition(0.3s);
+          }
+
+          input, textarea{
+            border: 1px $primary_colour solid;
+            padding: 8px 0;
+            text-indent: 10px;
+            @include font-primary(16, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+          }
+
+          .gfield_required{
+            display: none;
+          }
+
+        }
+
+        li.focused{
+
+          label{
+            top: -16px;
+            font-size: 13px;
+          }
+
+        }
+
+        div.validation_error{
+          display: none;
+        }
+
+        .validation_message{
+          margin: 10px 0 0 0 !important;
+          padding: 0 0 0 10px !important;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          @include font-primary(9, $secondary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+        }
+
+        li.gfield_error{
+
+          input, textarea{
+            background: #fff1f1;
+            border-color: #fff1f1;
+          }
+
+        }
+
+        .gform_footer{
+          padding-top: 0;
+          margin-top: 0;
+
+          button.button{
+            position: relative;
+            border: none;
+            padding: 10px 25px 12px;
+            float: right;
+            margin-right: 3%;
+            outline: none;
+
+          }
+
+          &:after{
+            content: "";
+            display: block;
+            clear: both;
+
+          }
+
+        }
+
+        .gform_validation_error{
+
+          .gform_footer {
+
+            button.button {
+              padding: 10px 23px 12px 38px;
+
+              span.icon{
+                display: block;
+                width: 13px;
+                height: 13px;
+                position: absolute;
+                top: 17px;
+                left: 14px;
+                background: url(../img/contact/icon_form_error.svg) no-repeat center;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .decal{
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: url(../img/contact/enquiries_decal.png) no-repeat left bottom;
+      /*background-position-y: 700px;*/
+      background-position-y: 100%;
+      @include transition(2s);
+
+    }
+
+    .decal.aos-animate{
+      background-position-y: 250px;
+    }
+
+  }
+
+}
+
+#field_1_4{
+  display: inline-block;
+  width: 100%;
+}
+
+
+//1200px
+@include mq("desktop"){
+
+  #main.contact .enquiriesForm .map{
+    width: 45%;
+  }
+
+
+}
+
+//1024px
+@include mq("tablet-wide"){
+
+  #main.contact .contactDetails .block h3{
+    font-size: 18px !important;
+  }
+
+
+}
+
+//782px
+@include mq("tablet") {
+
+  #main.contact .contactDetails .block.tel ul li span{
+    font-size: 16px;
+  }
+
+  #main.contact .enquiriesForm{
+    padding: 70px 0 0;
+    background: url(../img/contact/enquiries_decal_mobile.png) no-repeat bottom left;
+
+    .decal{
+      display: none;
+    }
+
+  }
+
+  #main.contact .enquiriesForm .wrapper{
+    width: 90%;
+  }
+
+  #main.contact .enquiriesForm .map{
+    width: 100%;
+    position: relative;
+    max-width: none;
+  }
+
+  #main.contact .enquiriesForm .map #mapArea{
+    height: 300px;
+  }
+
+}
+
+
+//640px
+@include mq("tablet-small"){
+  #main.contact .contactDetails .block{
+    float: none;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  #main.contact .enquiriesForm .wrapper{
+    width: 100%;
+  }
+
+}

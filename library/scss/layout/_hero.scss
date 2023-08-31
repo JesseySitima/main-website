@@ -1,0 +1,517 @@
+
+
+#hero{
+  width: 100%;
+  height: 750px;
+  position: relative;
+  z-index: 70;
+
+  .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg.parallaxed{
+    background: transparent !important;
+  }
+
+  .wrapper{
+    position: relative;
+    height: 100%;
+    z-index: 2;
+
+    .caption{
+
+      position: absolute;
+      left: 15%;
+      bottom: 20%;
+      opacity: 0;
+      @include transition();
+
+      &:before{
+        content: "";
+        display: block;
+        width: 34px;
+        height: 0;
+        background: url(../img/decal1.svg) no-repeat bottom center;
+        position: absolute;
+        bottom: -25px;
+        left: -40px;
+        @include transition();
+        transition-delay: .6s;
+      }
+
+      h2{
+
+        font-size: 47px;
+        font-family: "CircularStd Bold", Helvetica, Arial, sans-serif;
+        color: #fff;
+        margin: 0;
+
+      }
+
+      h3{
+        font-size: 26px;
+      }
+
+    }
+
+    .caption.black{
+
+      h2{
+        color: #000;
+      }
+
+    }
+
+  }
+
+  .decal{
+    position: absolute;
+    transition: 2.5s all cubic-bezier(.32,.06,.05,.97);
+    transition-delay: 1s;
+  }
+
+}
+
+#page.loaded{
+
+  .wrapper .caption{
+    opacity: 1;
+
+    &:before{
+      height: 67px;
+    }
+
+  }
+
+}
+
+
+
+#hero.alternate{
+  height: 450px;
+  background-color: #f8f9fe;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  .decal{
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+
+}
+
+#hero.alternate.alt1{
+
+  .decal{
+    background-image: url(../img/heroalt_decal1.svg);
+  }
+
+
+
+}
+
+#hero.alternate.alt2{
+
+  .decal {
+
+    background-image: url(../img/heroalt_decal2.svg);
+
+  }
+
+}
+
+#hero.alternate.alt3{
+
+  .decal {
+
+    background-image: url(../img/heroalt_decal3.svg);
+
+  }
+
+}
+
+
+
+#page.loaded{
+
+  #hero.alternate{
+
+    .decal{
+      height: 100%;
+    }
+
+
+  }
+
+}
+
+#hero.home{
+
+  .bg{
+    background-image: url(../img/home/hero.jpg);
+  }
+
+  .decal{
+    top: 35%;
+    right: 0;
+    width: 0;
+    height: 722px;
+    background: url(../img/home/hero_decal.svg) no-repeat center right;
+  }
+
+}
+
+#page.loaded{
+  #hero.home .decal{
+    width: 864px;
+  }
+}
+
+#hero.about{
+
+  .decal{
+    top: 25%;
+    right: 0;
+    width: 0;
+    height: 300px;
+    background: url(../img/about/hero_decal.svg) no-repeat top right;
+  }
+
+}
+
+#page.loaded{
+  #hero.about .decal{
+    width: 864px;
+    height: 722px;
+  }
+}
+
+
+#hero.research{
+
+  .decal{
+    top: 25%;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: url(../img/research/hero_decal.svg) no-repeat top right;
+  }
+
+}
+
+
+#page.loaded{
+  #hero.research .decal{
+    height: 968px;
+    width: 496px;
+  }
+}
+
+
+#hero.researchdetail{
+  background-color: #f8f9fe;
+  background-position: bottom right;
+
+  .wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .caption{
+    width: 54.6%;
+    left: inherit;
+    right: 0;
+    bottom: 50px;
+
+    span.sub{
+      display: block;
+      margin-bottom: 30px;
+      @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+    }
+
+    h2{
+      max-width: 500px;
+      @include font-primary(60, $primary_colour, $default_weight, 110%, $secondary_font_stack_bold);
+    }
+
+    h2.long{
+      font-size: 55px;
+    }
+
+  }
+
+
+}
+
+#hero.programme {
+
+  .decal {
+    top: 25%;
+    right: 0;
+    width: 0;
+    height: 500px;
+    background: url(../img/research/hero_decal.svg) no-repeat top right;
+  }
+
+}
+
+
+#page.loaded{
+  #hero.programme .decal{
+    width: 496px;
+    height: 968px;
+  }
+}
+
+
+#hero.training{
+
+  .decal{
+    top: 10%;
+    right: 0;
+    width: 603px;
+    height: 0;
+    background: url(../img/training/hero_decal.svg) no-repeat top right;
+  }
+
+}
+
+#page.loaded{
+  #hero.training .decal{
+    width: 603px;
+    height: 1115px;
+  }
+}
+
+
+#hero.engagement{
+
+  .decal{
+    top: 30%;
+    right: 0;
+    width: 0;
+    height: 688px;
+    background: url(../img/engagement/hero_decal.svg) no-repeat center right;
+  }
+
+}
+
+#page.loaded{
+  #hero.engagement .decal{
+    width: 573px;
+  }
+}
+
+
+#hero.strategy{
+  height: 450px;
+  background-color: #f8f9fe;
+
+  .wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .caption{
+    width: 54.6%;
+    left: inherit;
+    right: 0;
+    bottom: 100px;
+
+    span.sub{
+      display: block;
+      margin-bottom: 30px;
+      @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+    }
+
+    h2{
+      max-width: 500px;
+      @include font-primary(60, $primary_colour, $default_weight, 110%, $secondary_font_stack_bold);
+    }
+
+  }
+
+}
+
+
+#hero.single{
+  height: 460px;
+  background-color: #f8f9fe;
+
+  .wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .caption{
+    width: 54.6%;
+    left: inherit;
+    right: 0;
+    bottom: 50px;
+
+    span.sub{
+      display: block;
+      margin-bottom: 30px;
+      @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+    }
+
+    h2{
+      max-width: 700px;
+      @include font-primary(40, $primary_colour, $default_weight, 110%, $secondary_font_stack_bold);
+    }
+
+  }
+
+}
+
+/**************************************************************************************  Responsive */
+
+//1024px
+@include mq("tablet-wide"){
+
+  #hero{
+    height: 100vh;
+
+   .wrapper .caption h2{
+     font-size: 45px;
+   }
+
+  }
+
+  #hero .decal{
+    background-size: 100% !important;
+  }
+
+  #hero .decal{
+    top: 55% !important;
+    right: 0;
+    width: 232px !important;
+    height: 383px !important;
+    background: url(../img/home/hero_decal_mobile.svg) no-repeat center !important;
+  }
+
+  #hero.alternate .decal{
+    display: none;
+  }
+
+
+  #hero.alternate.alt1{
+    background-image: url(../img/heroalt_decal1.svg);
+  }
+
+  #hero.alternate.alt2{
+    background-image: url(../img/heroalt_decal2.svg);
+  }
+
+  #hero.alternate.alt3{
+    background-image: url(../img/heroalt_decal3.svg);
+  }
+
+  #hero .bg.parallaxed{
+    background: initial !important;
+  }
+
+
+
+}
+
+
+//782px
+@include mq("tablet") {
+
+  #hero.home{background: none}
+  #hero.home .bg{
+    background: url(../img/home/hero_mobile2.jpg) no-repeat center/cover !important;
+  }
+
+  #hero.researchdetail{
+    height: 450px;
+  }
+
+  #hero.researchdetail .caption{
+    width: auto;
+    left: 15%;
+    right: inherit;
+  }
+
+  #hero.alternate{
+    height: 350px;
+    background-size: 100%;
+    background-position: bottom right;
+
+  }
+
+
+  #hero.alternate .decal{
+    display: none;
+  }
+
+
+  #hero.alternate.alt1{
+    background-image: url(../img/heroalt_decal1.svg);
+  }
+
+  #hero.alternate.alt2{
+    background-image: url(../img/heroalt_decal2.svg);
+
+  }
+
+  #hero.alternate.alt3{
+    background-image: url(../img/heroalt_decal3.svg);
+
+  }
+
+
+  #hero.single{
+    height: 100vh !important;
+  }
+
+  #hero.single .caption{
+    width: auto;
+    left: 15%;
+    right: inherit;
+  }
+
+  #hero .wrapper .caption h2 br{
+    display: none;
+  }
+
+
+  #hero .bg{
+    background-position: center right !important;
+  }
+
+
+  #hero.research .decal{
+    display: none;
+  }
+
+  #hero.programme .decal{
+    display: none;
+  }
+
+}
+
+//640px
+@include mq("tablet-small"){
+
+  #hero .wrapper .caption h2{font-size: 26px; padding-right: 15px;}
+
+  #hero.single .caption span.sub{font-size: 16px;}
+
+  #hero.alternate.single .caption h2{font-size: 24px; padding-right: 15px;}
+
+}

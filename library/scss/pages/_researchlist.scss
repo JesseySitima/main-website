@@ -1,0 +1,344 @@
+#main.researchlist {
+
+  .subnav {
+    padding: 50px 0 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+
+    .wrapper{
+      text-align: center;
+
+      a{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 45px;
+        padding-bottom: 47px;
+        border-bottom: 3px transparent solid;
+        @include font-primary(30, rgba(26, 35, 58, 0.5), $default_weight, 100%, $secondary_font_stack_book);
+        @include transition();
+      }
+
+      a:hover{
+        color: $secondary_colour;
+      }
+
+      a.current{
+        color: $secondary_colour;
+        border-color: $secondary_colour;
+
+      }
+
+    }
+
+  }
+
+  .intro {
+    padding: 70px 0 80px;
+
+    .wrapper {
+      margin: 0 80px 0 0;
+
+      h2{
+        margin-bottom: 50px;
+        @include font-primary(40, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+
+      }
+
+      p{
+        margin-bottom: 0;
+        @include font-primary(20, $primary_colour, $default_weight, 140%);
+      }
+
+    }
+
+  }
+
+  .articles{
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 254, 253, 0), #f8f9fe 33%);
+
+    .container{
+      position: relative;
+      z-index: 2;
+    }
+
+    h2{
+      margin-bottom: 60px;
+      @include font-primary(40, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+    }
+
+    .list{
+      position: relative;
+      margin: 0 -1%;
+      z-index: 2;
+
+      article{
+        width: 31.3%;
+        float: left;
+        height: 635px;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+        margin: 0 1% 30px;
+        background: #fff;
+        @include transition();
+
+        .image{
+
+          img{
+            display: block;
+            max-width: 100%;
+          }
+
+        }
+
+        .info{
+
+          .articleTitle{
+
+            height: 135px;
+            padding: 35px 15px 0;
+            border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+
+            h3{
+              @include font-primary(25, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+              @include transition();
+            }
+
+          }
+
+          .bottom{
+            padding: 13px 20px 20px;
+            position: relative;
+
+            .researchBy{
+              margin-bottom: 20px;
+
+              span{
+                display: block;
+              }
+
+              span.label{
+                @include font-primary(16, #a6a19b, $default_weight, 125%, $secondary_font_stack_book);
+              }
+
+              span.text{
+                min-height: 50px;
+                @include font-primary(16, #4d4238, $default_weight, 140%, $secondary_font_stack_book);
+              }
+
+            }
+
+            .view{
+              display: block;
+
+
+              span{
+                display: inline-block;
+                vertical-align: middle;
+              }
+
+              span.arrow{
+                @include transition(0.3s);
+              }
+
+              span.text{
+                text-transform: uppercase;
+                @include font-primary(14, $secondary_colour, $default_weight, 125%, $secondary_font_stack_mono);
+              }
+
+            }
+
+            &:after{
+              content: "";
+              display: block;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              height: 5px;
+              background: $secondary_colour;
+              @include transition(0.3s);
+
+            }
+
+          }
+
+
+        }
+
+      }
+
+      article:hover{
+        box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.3);
+
+        .info{
+
+          .articleTitle{
+
+            h3{
+              color: $secondary_colour;
+            }
+
+          }
+
+        }
+
+        .bottom{
+
+          &:after{
+
+            width: 100%;
+
+          }
+
+        }
+
+      }
+
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+    }
+
+    .pagination{
+      position: relative;
+
+      .inner{
+        display: none;
+      }
+
+    }
+
+    .action{
+      padding: 50px 0;
+      text-align: center;
+
+      a.loadMore{
+        position: relative;
+        padding: 10px 60px 12px;
+      }
+
+    }
+
+    &:after{
+
+      content: "";
+      display: block;
+      width: 821px;
+      height: 433px;
+      background: url(../img/research/list_decal.png) no-repeat left bottom;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+    }
+
+  }
+
+}
+
+//1024px
+@include mq("tablet-wide"){
+
+  #main.researchlist .intro .wrapper{
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  #main.researchlist .intro .wrapper h2{
+    font-size: 32px;
+  }
+
+  #main.researchlist .articles:after{
+    width: 285px;
+    height: 192px;
+    background: url(../img/research/list_decal_mobile.png) no-repeat left bottom;
+  }
+
+  #main.researchlist .articles .list article{
+    height: auto;
+  }
+
+  #main.researchlist .articles .list article .info .articleTitle h3{
+    font-size: 20px !important;
+  }
+
+}
+
+//782px
+@include mq("tablet"){
+
+  #main.researchlist .subnav{
+    padding-top: 0;
+  }
+
+  #main.researchlist .subnav .wrapper a{
+    display: block;
+    font-size: 16px;
+    padding: 15px 0;
+    margin: 0;
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  }
+
+
+  #main.researchlist .intro{
+    padding: 70px 0;
+  }
+
+  #main.researchlist .intro .wrapper h2{
+    font-size: 18px;
+  }
+  #main.researchlist .intro .wrapper p{
+    font-size: 16px;
+  }
+
+
+  #main.researchlist .articles{
+    padding-bottom: 70px;
+  }
+
+  #main.researchlist .articles .list{
+    margin: 0;
+  }
+
+  #main.researchlist .articles .list article{
+    width: 100%;
+    float: none;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  #main.researchlist .articles .list article .image img{display: none}
+
+  #main.researchlist .articles .list article .info .articleTitle{
+    height: auto;
+    padding: 12px 10px;
+    position: relative;
+  }
+
+  #main.researchlist .articles .list article .info .articleTitle h3{
+    font-size: 15px !important;
+  }
+
+  #main.researchlist .articles .list article .info .articleTitle:after{
+    content: "";
+    display: block;
+  position: absolute;
+    top: 16px;
+    right: 10px;
+  width: 12px;
+  height: 7px;
+    transform: rotate(-90deg);
+  background: url(../img/icon_arrow_small.svg) no-repeat center;
+}
+
+  #main.researchlist .articles .list article .info .articleTitle h3{
+
+  }
+
+  #main.researchlist .articles .list article .info .bottom{
+    display: none;
+  }
+
+}

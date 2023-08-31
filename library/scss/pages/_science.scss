@@ -1,0 +1,664 @@
+
+#hero.science{
+  position: relative;
+  overflow: hidden;
+  .slider{
+    position: relative;
+    max-height: 750px;
+
+    #scienceSlider{
+      max-height: 750px;
+    }
+
+    img{
+      max-width: 100%;
+    }
+
+    .slick-dots{
+      position: absolute;
+      bottom: 60px;
+      right: 70px;
+
+      li{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px;
+
+        button{
+          border: 3px #d0021b solid;
+          text-indent: -9999px;
+          width: 18px;
+          height: 18px;
+          padding: 0;
+          background: none;
+          border-radius: 50%;
+          outline: none;
+          opacity: 1;
+          @include transition();
+
+          &:hover{
+            opacity: 0.7;
+          }
+
+        }
+
+        &.slick-active{
+          button{
+            background: #d0021b;
+          }
+        }
+
+      }
+
+    }
+
+  }
+}
+
+#main.science{
+
+  .about{
+    padding: 70px 0;
+
+    .wrapper{
+      position: relative;
+      max-width: 770px;
+
+      > h3{
+        margin-bottom: 35px;
+        @include font-primary(18, $primary_colour, $default_weight,  $default_lh, $secondary_font_stack_bold);
+
+      }
+
+      .intro{
+        margin-bottom: 40px;
+
+      }
+
+    }
+
+  }
+
+  .aim{
+    position: relative;
+
+    .bg{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      .container{
+        background: #f5f2ee;
+        position: relative;
+        height: 100%;
+
+      }
+
+      .overflow{
+        background: #f5f2ee;
+        position: absolute;
+        width: 50%;
+        left: 50%;
+        top: 0;
+        height: 100%;
+      }
+
+    }
+
+    .wrapper{
+      position: relative;
+      z-index: 2;
+      padding: 100px 0;
+
+      .image{
+        float: left;
+        width: 39.3%;
+
+        img{
+          display: block;
+          width: 100%;
+          max-width: 100%;
+
+        }
+
+      }
+
+      .details{
+        float: right;
+        width: 60.7%;
+
+        .inner{
+          max-width: 603px;
+          margin: 0 auto;
+          padding: 0 15px;
+
+          .title{
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px #b6bcd6 solid;
+
+            h3{
+              @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+            }
+
+          }
+
+          .articleContent{
+            max-width: 690px;
+          }
+
+          p.first{
+            margin-top: 0;
+            margin-bottom: 40px;
+            @include font-primary(30, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+          }
+
+          p{
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .stories{
+    position: relative;
+    padding: 65px 0;
+    background: url(../img/science/stories_decal.png) no-repeat bottom left;
+
+    h2{
+      display: block;
+      text-align: center;
+      margin-bottom: 65px;
+
+    }
+
+    .links{
+      position: relative;
+      border-top: 1px #ece8e0 solid;
+      padding-top: 55px;
+      text-align: center;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+
+      a{
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 55px;
+        margin: 0 15px;
+        border-bottom: 4px transparent solid;
+        @include font-primary(20, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+        @include transition();
+
+      }
+
+      a:hover{
+        color: $secondary_colour;
+      }
+
+      a.current{
+        color: $secondary_colour;
+        border-color: $secondary_colour;
+
+      }
+
+    }
+
+    .tabs{
+      padding: 105px 0 0;
+
+
+      .tab{
+        position: relative;
+        display: none;
+
+        .image{
+          float: left;
+          width: 40%;
+          padding-top: 20px;
+
+          img{
+            display: block;
+            margin: 0 auto;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px #ece8e0 solid;
+
+          }
+
+        }
+
+        .details{
+          float: left;
+          width: 60%;
+
+          .block{
+            margin-bottom: 50px;
+
+            h3{
+              display: block;
+              margin-bottom: 25px;
+              @include font-primary(18, $primary_colour, bold, 125%);
+            }
+
+            .articleContent{
+
+              strong{
+                font-weight: 500;
+              }
+
+
+              p{
+                font-size: 18px;
+
+
+              }
+
+              li{
+                font-size: 18px;
+                line-height: 140%
+              }
+
+            }
+
+          }
+
+
+
+        }
+
+
+      }
+
+      .tab.current{
+        display: block;
+
+      }
+
+    }
+
+  }
+
+  .impact{
+    position: relative;
+    padding: 70px 0;
+
+    .bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 75%;
+      height: 100%;
+      background: #f8f9fe;
+    }
+
+    .wrapper{
+      position: relative;
+      z-index: 2;
+    }
+
+    .image{
+      position: relative;
+      width: 35.7%;
+      float: right;
+      padding-top: 100px;
+
+      img{
+        display: block;
+        max-width: 100%;
+
+      }
+
+    }
+
+    .details{
+      width: 64.3%;
+      float: left;
+
+      .inner{
+        max-width: 725px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        .title{
+          margin-bottom: 50px;
+          padding-bottom: 40px;
+          border-bottom: 2px #b6bcd6 solid;
+
+          h3{
+            @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+          }
+
+        }
+
+        .articleContent{
+          max-width: 690px;
+        }
+
+        p.first{
+          margin-top: 0;
+          margin-bottom: 40px;
+          @include font-primary(30, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+        }
+
+        p{
+
+        }
+
+      }
+
+
+    }
+
+  }
+
+  .findings{
+    position: relative;
+    padding: 70px 0;
+
+    .main{
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+
+      span.title{
+        display: block;
+        margin-bottom: 50px;
+        @include font-primary(20, $primary_colour, $default_weight, 125%);
+      }
+
+      p{
+        text-align: left;
+        @include font-primary(30, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+      }
+
+    }
+
+    .example{
+      padding: 70px 0;
+      border-bottom: 20px #f5f2ee solid;
+      margin-bottom: 70px;
+
+      .wrapper{
+        max-width: 594px;
+
+
+        .articleContent{
+
+          li{
+            font-size: 20px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .profiles{
+
+      .profile {
+        position: relative;
+        margin-bottom: 80px;
+
+        .image {
+          float: left;
+          width: 40%;
+          padding-top: 20px;
+
+          img {
+            display: block;
+            margin: 0 auto;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px #ece8e0 solid;
+
+          }
+
+        }
+
+        .details {
+          float: left;
+          width: 60%;
+
+          .articleContent{
+
+            p{
+              font-size: 18px;
+            }
+
+          }
+
+        }
+
+      }
+
+      .profile.leadership{
+
+        .image{
+          padding-top: 50px;
+        }
+
+        h3{
+          margin-bottom: 30px;
+          @include font-primary(20, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+//1024px
+@include mq("tablet-wide"){
+
+  #main.science .aim .wrapper .details .inner p.first{
+    font-size: 24px;
+  }
+
+  #main.science .aim .wrapper .details .inner .title h3{
+    font-size: 18px !important;
+  }
+
+  #main.science .aim .wrapper .details .inner{
+    padding: 0 20px;
+  }
+
+  #main.science .stories .tabs .tab .details .block h3{
+    font-size: 18px !important;
+  }
+
+  #main.science .impact .details .inner .title h3{
+    font-size: 18px !important;
+  }
+
+  #main.science .about .wrapper > h3{
+    font-size: 18px !important;
+  }
+
+}
+
+
+//782px
+@include mq("tablet"){
+
+  #hero.science{
+    height: 100vh;
+    height: 50vh;
+    margin-top: 65px;
+
+    .slider{
+
+      .slick-dots{
+        padding: 0;
+        margin: 0;
+        bottom: 30px;
+        right: 30px;
+
+        li{
+          margin: 0 5px;
+
+          button{
+            width: 9px;
+            height: 9px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .wrapper .caption{
+      bottom: 30%;
+      h2{
+        font-size: 22px;
+      }
+    }
+
+
+  }
+
+  #main.science .about{
+    padding: 70px 0;
+  }
+
+  #main.science .aim .wrapper .details .inner p.first{
+    font-size: 16px;
+  }
+
+  #main.science .stories{
+    background: none;
+    padding: 70px 0 0;
+  }
+
+  #main.science .stories h2{
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+
+  #main.science .stories .links{
+    padding: 0;
+  }
+  #main.science .stories .links a{
+    display: block;
+    padding:  15px 0;
+    font-size: 15px;
+    border-bottom: 1px #ece8e0 solid;
+  }
+
+  #main.science .stories .tabs{
+    padding: 70px 0;
+  }
+
+  #main.science .stories .tabs .tab .image{
+    float: none;
+    width: auto;
+    margin-bottom: 40px;
+
+  }
+
+  #main.science .stories .tabs .tab .details{
+    float: none;
+    width: auto;
+  }
+
+  #main.science .stories .tabs .tab .details .block .articleContent p{
+    font-size: 16px;
+  }
+
+  #main.science .stories .tabs .tab .details .block .articleContent li{
+    font-size: 16px;
+  }
+
+  #main.science .impact .bg{
+    width: 100%;
+  }
+
+  #main.science .impact .image{
+    float: none;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  #main.science .impact .details{
+    float: none;
+    width: 100%;
+  }
+
+  #main.science .impact .details .inner p.first{
+    font-size: 18px;
+  }
+
+  #main.science .findings .main span.title{
+    font-size: 18px;
+  }
+
+  #main.science .findings .main p{
+    font-size: 20px;
+  }
+
+  #main.science .findings .example{
+    padding: 70px 0;
+  }
+
+  #main.science .findings .example .wrapper .articleContent li{
+    font-size: 14px;
+  }
+
+  #main.science .findings .example{
+    margin-bottom: 70px;
+  }
+
+  #main.science .findings .profiles .profile .image{
+    float: none;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  #main.science .findings .profiles .profile{
+    margin-bottom: 40px;
+  }
+
+  #main.science .findings .profiles .profile .details{
+    float: none;
+    width: 100%;
+  }
+
+  #main.science .findings .profiles .profile .details .articleContent p{
+    font-size: 14px;
+  }
+
+  #main.science .findings .profiles .profile.leadership h3{
+    font-size: 18px !important;
+  }
+
+}
+
+//640px
+@include mq("tablet-small"){
+
+
+  #main.science .aim .wrapper .image{
+    float: none;
+    width: 100%;
+    margin-bottom: 40px;
+
+  }
+
+  #main.science .aim .wrapper .details{
+    float: none;
+    width: auto;
+  }
+
+}

@@ -1,0 +1,713 @@
+#main.researchdetail {
+  position: relative;
+  z-index: 100;
+
+  .details {
+      position: relative;
+      padding: 50px 0 0;
+
+      aside.overview{
+        width: 32%;
+        position: absolute;
+        top: -280px;
+        max-width: 410px;
+
+        a.backTo{
+          display: block;
+          margin-bottom: 30px;
+
+          span{
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          span.arrow{
+            width: 29px;
+            height: 22px;
+            background: url(../img/research/back_arrow.svg) no-repeat center;
+            margin-right: 10px;
+            @include transition(0.3s);
+          }
+
+          span.text{
+            @include transition();
+            @include font-primary(16, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+          }
+
+        }
+
+        a.backTo:hover{
+
+          span.text{
+            color: $secondary_colour;
+          }
+
+        }
+
+        .featuredImage{
+
+          img{
+            display: block;
+            max-width: 100%;
+          }
+
+        }
+
+        .researchers{
+
+          .researcher{
+            position: relative;
+            border: 1px #d9d9d9 solid;
+
+            .inner{
+              padding: 20px;
+            }
+
+            .profileImage{
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 15px;
+              height: 60px;
+
+              img{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+              }
+
+            }
+
+            .profileInfo{
+              display: inline-block;
+              vertical-align: middle;
+              max-width: calc(100% - 85px);
+
+              span{
+                 display: inline-block;
+                 vertical-align: middle;
+               }
+
+              span.title{
+                @include font-primary(16, #a6a19b, $default_weight, 100%, $secondary_font_stack_book);
+              }
+
+              span.name{
+                cursor: pointer;
+                text-decoration: underline;
+                @include font-primary(16, #4d4237, $default_weight, 100%, $secondary_font_stack_book);
+                @include transition();
+
+                &:hover{
+                  color: $secondary_colour;
+                }
+              }
+
+            }
+
+
+            .action{
+              border-top: 1px #d9d9d9 solid;
+              position: relative;
+
+              a{
+                display: block;
+                width: 100%;
+                height: 57px;
+                text-align: center;
+                line-height: 57px;
+                background: #fff;
+                outline: none;
+                @include transition();
+
+                span{
+                  display: inline-block;
+                  vertical-align: middle;
+                }
+
+                span.arrow{
+                  width: 6px;
+                  height: 12px;
+                  margin-right: 20px;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  background-image: url(../img/icon_button_arrow_red.svg);
+                  @include transition();
+                }
+
+                span.text{
+                  @include font-primary(14, $secondary_colour, $default_weight, 125%, $secondary_font_stack_mono);
+                  text-transform: uppercase;
+                  letter-spacing: 3.5;
+                  @include transition();
+                }
+
+                &:hover{
+                  background: $secondary_colour;
+
+                  span.arrow{
+                    background-image: url(../img/icon_button_arrow_white.svg);
+                  }
+
+                  span.text{
+                    color: #fff;
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+          .researcher.lead{
+            border: none;
+            border-bottom: 4px #d21c32 solid;
+            padding: 35px 20px;
+            background: url(../img/research/lead_researcher_bg.svg) no-repeat center;
+            background-size: cover;
+
+            .profileInfo{
+
+              span{
+                display: block;
+              }
+
+              span.title{
+                margin-bottom: 5px;
+              }
+
+            }
+
+          }
+
+          .sliderControls{
+            margin: 20px 0;
+            text-align: center;
+
+            a.control{
+              display: inline-block;
+              vertical-align: middle;
+              width: 40px;
+              height: 40px;
+              margin: 0 10px;
+              opacity: 1;
+              @include transition();
+
+              &.prev{
+                background: url(../img/training/icon_student_arrow.svg) no-repeat center;
+                background-size: 100%;
+                transform: rotate(180deg);
+              }
+
+              &.next{
+                background: url(../img/training/icon_student_arrow.svg) no-repeat center;
+                background-size: 100%;
+              }
+
+              &:hover{
+                opacity: 0.8;
+              }
+
+            }
+
+          }
+
+
+        }
+
+      }
+
+      .info{
+        margin-bottom: 100px;
+        width: 54.6%;
+
+        .description{
+          border-bottom: 7px #231508 solid;
+          padding-bottom: 50px;
+          margin-bottom: 60px;
+
+          p{
+            @include font-primary(30, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+          }
+
+        }
+
+
+      }
+
+  }
+
+  .related{
+    margin-bottom: 80px;
+
+    h3{
+      margin-bottom: 35px;
+      @include font-primary(40, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+    }
+
+    .links{
+      margin: 0 -1%;
+
+      .block{
+        float: left;
+        width: 31.3%;
+        margin: 0 1%;
+        position: relative;
+        opacity: 1;
+        @include transition();
+
+        .caption{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+
+          &:before{
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+
+          }
+
+          span.text{
+            display: inline-block;
+            vertical-align: middle;
+            max-width: calc(100% - 5px);
+            @include font-primary(25, #fff1f1, $default_weight, 125%, $secondary_font_stack_bold);
+          }
+
+        }
+
+      }
+
+      .block:hover{
+        opacity: 0.8;
+      }
+
+    }
+
+  }
+
+  .partnerships{
+    display: none;
+
+    h3{
+      text-align: center;
+      margin-bottom: 50px;
+      @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+    }
+
+    .links{
+      padding: 35px 0;
+      border-top: 1px #ece8e0 solid;
+      text-align: center;
+
+      .list{
+        display: -webkit-box;
+        -webkit-box-pack: justify;
+        -webkit-box-align: center;
+        display: -moz-box;
+        -moz-box-pack: justify;
+        -moz-box-align: center;
+        display: -ms-flexbox;
+        -ms-flex-pack: justify;
+        -ms-flex-align: center;
+        display: box;
+        box-pack: justify;
+        box-align: center;
+      }
+
+      a{
+        display: block;
+      }
+
+    }
+
+  }
+
+
+  .publications{
+    padding: 125px 0;
+    position: relative;
+    background: #f8f9fe url(../img/research/publication_decal.png) no-repeat left bottom;
+
+    .wrapper{
+      max-width: 990px;
+      margin: 0 0 0 auto;
+
+      .top{
+        margin-bottom: 80px;
+
+        h3{
+          float: left;
+          margin-top: 10px;
+          @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_book);
+        }
+
+        a.button{
+          float: right;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+#researcherSlider{
+  position: relative;
+
+
+  .slick-list{
+    /*padding:0 20% 0 0;*/
+  }
+
+  .slick-dots{
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    li{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 8px;
+
+      button{
+        background: none;
+        text-indent: -9999px;
+        display: block;
+        width: 12px;
+        height: 12px;
+        border: 1px $secondary_colour solid;
+        border-radius: 50%;
+        padding: 0;
+      }
+
+      &.slick-active{
+
+        button{
+          background: $secondary_colour;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+#researcherdetails{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(236, 232, 224, 0.7);
+  z-index: 99999;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  @include transition();
+
+  .wrapper{
+    position: relative;
+    max-width: 845px;
+    height: auto;
+    margin: 100px auto 150px;
+    box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    top: 30px;
+    @include transition();
+
+    a.closeResearcher{
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url(../img/icon_close_large.svg) no-repeat top right;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      z-index: 3;
+    }
+
+    .inner{
+      padding: 72px 110px 70px 30px;
+      @include clearFix();
+
+      .top{
+        position: relative;
+        @include clearFix();
+
+        .image{
+          float: left;
+          margin-bottom: 20px;
+
+          img{
+            display: block;
+            width: 100%;
+            border-radius: 50%;
+          }
+
+        }
+
+        .meta{
+          float: right;
+          width: 100%;
+          max-width: 555px;
+
+
+          h3{
+            padding-bottom: 25px;
+            border-bottom: 1px #ece8e0 solid;
+            margin-bottom: 25px;
+            @include font-primary(16, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+          }
+
+          .bottom{
+            @include clearFix();
+
+            p.education{
+              font-size: 14px;
+              max-width: 205px;
+              margin: 0 auto;
+              float: left;
+
+            }
+
+            ul{
+              float: right;
+              margin: 0;
+              padding: 0;
+              width: 50%;
+
+              li{
+                display: none;
+
+                span{
+                  display: inline-block;
+                  vertical-align: middle;
+                }
+
+                span.label{
+                  width: 55px;
+                  @include font-primary(14, $secondary_colour, $default_weight, 125%);
+                }
+
+                span.value{
+                  @include font-primary(14, $primary_colour, $default_weight, 125%);
+
+                  a{
+                    @include font-primary(14, $primary_colour, $default_weight, 125%);
+                  }
+
+
+                }
+
+              }
+
+              li.show{
+                display: block;
+              }
+
+            }
+
+          }
+
+
+
+
+        }
+
+      }
+
+      .details{
+        float: right;
+        max-width: 555px;
+        width: 100%;
+
+        p{
+          color: #695f56;
+          font-size: 14px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+#page.researcheropen{
+  overflow: hidden;
+}
+#page.researcheropen #researcherdetails{
+  opacity: 1;
+  visibility: visible;
+}
+
+#page.researcheropen #researcherdetails .wrapper{
+  top: 0;
+}
+
+//1024px
+@include mq("tablet-wide"){
+
+  #main.researchdetail .details aside.overview .researchers .researcher .profileInfo{
+    max-width: calc(100% - 80px);
+  }
+
+  #main.researchdetail .details aside.overview .researchers .researcher .profileInfo span.name{
+    font-size: 14px;
+  }
+
+  #main.researchdetail .details aside.overview .researchers .researcher .profileInfo span.title{
+    font-size: 14px;
+  }
+
+}
+
+//782px
+@include mq("tablet") {
+
+  #main.researchdetail .details{
+    padding-top: 0;
+  }
+
+
+
+  #main.researchdetail .details aside.overview a.backTo{
+    display: none;
+  }
+
+
+  #main.researchdetail .details aside.overview{
+    width: 100%;
+    top: 0;
+    margin-bottom: 60px;
+    max-width: none;
+    position: relative;
+  }
+
+  #main.researchdetail .details aside.overview .researchers .researcher.lead .profileInfo span.title{
+    font-size: 14px;
+  }
+  #main.researchdetail .details aside.overview .researchers .researcher.lead .profileInfo span.name{
+    font-size: 14px;
+  }
+
+  #main.researchdetail .details aside.overview .featuredImage img{
+    width: 100%;
+
+  }
+
+  #main.researchdetail .details .info{
+    width: auto;
+    float: none;
+  }
+
+  #main.researchdetail .related{
+    margin-bottom: 70px;
+  }
+
+  #main.researchdetail .related h3{
+    font-size: 24px !important;
+  }
+
+  #main.researchdetail .related .links .block{
+    float: none;
+    width: 100%;
+    margin: 0 0 20px;
+    display: block;
+    padding: 20px 0;
+
+    img{
+      display: none;
+      width: 100%;
+    }
+
+  }
+
+  #main.researchdetail .related .links .block .caption{
+    position: relative;
+    height: auto;
+    width: auto;
+  }
+
+  #main.researchdetail .related .links .block .caption span.text{
+    font-size: 18px;
+
+  }
+
+  #main.researchdetail .related .links .block.block1{
+    background: $secondary_colour url(../img/research/linkblock1_mobile.png) no-repeat center;
+  }
+
+  #main.researchdetail .related .links .block.block2{
+    background: $secondary_colour url(../img/research/linkblock2_mobile.png) no-repeat center;
+  }
+
+  #main.researchdetail .related .links .block.block3{
+    background: $secondary_colour url(../img/research/linkblock3_mobile.png) no-repeat center;
+  }
+
+  #main.researchdetail .partnerships h3{
+    font-size: 18px !important;
+    margin-bottom: 30px;
+  }
+
+  #main.researchdetail .partnerships .links{
+    position: relative;
+    padding: 15px 0;
+  }
+
+  #main.researchdetail .partnerships .links .container{
+    position: relative;
+    overflow: auto;
+  }
+
+  #main.researchdetail .partnerships .links:after{
+    content: "";
+    display: block;
+    width: 77px;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6) 3%, #ffffff);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  #main.researchdetail .partnerships .links .list{
+    width: 960px;
+    padding-right: 100px;
+  }
+
+  #main.researchdetail .partnerships .links .list img{
+    max-width: 160px;
+    max-height: 100px;
+  }
+
+  #main.researchdetail .publications{
+    padding: 70px 0;
+    background: none;
+  }
+
+  #main.researchdetail .publications .wrapper .top h3{
+    @include font-primary(18, $primary_colour, $default_weight, 125%, $secondary_font_stack_bold);
+    font-size: 18px !important;
+  }
+
+}

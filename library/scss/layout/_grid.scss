@@ -1,0 +1,59 @@
+/************************************************************ container and layout */
+
+.container{width:100%;max-width:1440px;margin: 0 auto;padding:0;}
+.container.large{max-width:1360px;}
+.container.l0{max-width:1280px;}
+.container.l1{max-width:990px;}
+.container.l2{max-width:1105px;}
+.container.l3{max-width:1040px;}
+.container.l4{max-width:820px;}
+
+
+.row{
+  @include clearFix();
+  margin:0 -13px;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+
+
+
+
+//1200px
+@include mq("desktop"){
+
+  .container.l0{
+    padding: 0 20px;
+  }
+
+}
+
+//1024px
+@include mq("tablet-wide"){
+
+ .container{
+   padding: 0 20px;
+ }
+
+
+
+}
+
+@include mq("tablet-small"){
+
+  .left{
+    float: none !important;
+  }
+
+  .right{
+    float: none !important;
+  }
+
+}
